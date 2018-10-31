@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins");
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body header img {
+  width: 115px;
+  height: 25px;
+}
+/*# sourceMappingURL=main.css.map */
