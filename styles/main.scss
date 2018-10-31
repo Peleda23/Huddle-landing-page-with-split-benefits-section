@@ -2,11 +2,15 @@
 
 // font-family: 'Poppins', sans-serif;
 // font-family: 'Open Sans', sans-serif;
+$padding: 20px;
+$body-font: 'Open Sans', sans-serif;
+$headings-font: 'Poppins', sans-serif;
 
 $colors: (
   primary: hsl(322, 100%, 66%),
   neutral1: hsl(192, 100%, 9%),
-  neutral2: hsl(208, 11%, 55%)
+  neutral2: hsl(208, 11%, 55%),
+  neutral3: #F6FBFF
 );
 
 @function color($color-name) {
@@ -16,15 +20,65 @@ $colors: (
 body {
   margin: 0;
   padding: 0;
+  font-family: $body-font;
+
 
   header {
+    padding: $padding;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     img {
-      width: 115px;
-      height: 25px;
+      width: 80px;
+      height: 15px;
+      display: block;
+      justify-self: start;
     }
 
     button {
-      
+      display: block;
+      justify-self: end;
+      height: 23px;
+      width: 90px;
+      border: color(primary) 1px solid;
+      border-radius: 7%;
+      background: white;
+      color: color(primary);
+    }
+  }
+
+  main {
+    // padding: $padding;
+
+    .section-one {
+      padding: $padding;
+
+      h1 {
+        font-family: $headings-font;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1.4em;
+      }
+
+      p {
+        text-align: center;
+        color: color(neutral2);
+        font-size: 0.8em;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .section-two {
+      width: 100%;
+      padding-left: 0;
+      background: color(neutral3);
+
+      img {
+        width: 100%;
+      }
     }
   }
 }
