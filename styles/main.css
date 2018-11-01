@@ -31,6 +31,8 @@ body header button {
   border-radius: 7%;
   background: white;
   color: #ff52bf;
+  -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
 }
 
 body main .section-one {
@@ -52,15 +54,101 @@ body main .section-one p {
 
 body main .section-one img {
   width: 100%;
+  padding-bottom: 40px;
 }
 
 body main .section-two {
   width: 100%;
-  padding-left: 0;
   background: #F6FBFF;
+  padding-bottom: 50px;
 }
 
-body main .section-two img {
+body main .section-two div {
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+body main .section-two div img {
   width: 100%;
+}
+
+body main .section-two h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+body main .section-two p {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 0.8em;
+  color: #808d99;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+body main .section-three {
+  padding-bottom: 50px;
+}
+
+body main .section-three h1 {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-transform: capitalize;
+}
+
+body main .section-three button {
+  width: 46%;
+  height: 40px;
+  margin-left: 27%;
+  margin-right: 27%;
+  background: #ff52bf;
+  border: #ff52bf 1px solid;
+  border-radius: 5px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+}
+
+body footer {
+  background: #00252e;
+  color: white;
+}
+
+body footer h1 {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
+  padding-left: 20px;
+  padding-top: 80px;
+}
+
+body footer form {
+  padding-left: 20px;
+}
+
+body footer form input[type="text"] {
+  margin: 0;
+  height: 27px;
+  width: 65%;
+  padding: 0;
+  border: none;
+}
+
+body footer form button {
+  height: 27px;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 /*# sourceMappingURL=main.css.map */
