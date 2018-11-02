@@ -28,7 +28,7 @@ body header button {
   height: 23px;
   width: 90px;
   border: #ff52bf 1px solid;
-  border-radius: 7%;
+  border-radius: 4px;
   background: white;
   color: #ff52bf;
   -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
@@ -112,7 +112,7 @@ body main .section-three button {
   margin-right: 27%;
   background: #ff52bf;
   border: #ff52bf 1px solid;
-  border-radius: 5px;
+  border-radius: 4px;
   color: white;
   text-transform: capitalize;
   font-weight: 700;
@@ -135,20 +135,98 @@ body footer h1 {
 
 body footer form {
   padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
 }
 
 body footer form input[type="text"] {
   margin: 0;
-  height: 27px;
-  width: 65%;
+  height: 38px;
+  min-width: 75%;
   padding: 0;
   border: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: block;
+  float: left;
 }
 
 body footer form button {
-  height: 27px;
+  height: 38px;
   margin: 0;
   padding: 0;
   border: none;
+  width: 25%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: #ff52bf;
+}
+
+body footer div .bottom-logo {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+body footer div p {
+  padding-left: 20px;
+}
+
+body footer .icons-cont {
+  padding-left: 20px;
+  padding-bottom: 40px;
+}
+
+body footer .icons-cont .icons {
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+}
+
+body footer .nav1 ul {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  list-style: none;
+}
+
+body footer .nav1 ul li {
+  line-height: 38px;
+}
+
+body footer .nav1 ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+body footer .nav2 {
+  padding-bottom: 30px;
+}
+
+body footer .nav2 ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+body footer .nav2 ul li {
+  line-height: 38px;
+}
+
+body footer .nav2 ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+body footer .bottom-p {
+  background-image: url(bg-footer-mobile.png);
+}
+
+body footer .bottom-p p {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 56px;
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */

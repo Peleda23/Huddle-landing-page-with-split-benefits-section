@@ -41,7 +41,7 @@ body {
       height: 23px;
       width: 90px;
       border: color(primary) 1px solid;
-      border-radius: 7%;
+      border-radius: 4px;
       background: white;
       color: color(primary);
       box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.75);
@@ -121,7 +121,7 @@ body {
         margin-right: 27%; 
         background: color(primary);
         border: color(primary) 1px solid;
-        border-radius: 5px;
+        border-radius: 4px;
         color: white;
         text-transform: capitalize;
         font-weight: 700;
@@ -144,24 +144,99 @@ body {
 
     form {
       padding-left: $padding;
+      padding-right: $padding;
+      padding-bottom: 60px;
 
       input[type="text"] {
         margin: 0;
-        height: 27px;
-        width: 65%;
+        height: 38px;
+        min-width: 75%;
         padding: 0;
         border: none;
-        
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        display: block;
+        float: left;
       }
+  
 
-      
-      
       button {
-        height: 27px;
+        height: 38px;
         margin: 0;
         padding: 0;
         border: none;
+        width: 25%;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background: color(primary);
       }
     }
-  }
+    div {
+      
+      .bottom-logo {
+        padding-left: $padding;
+        padding-bottom: 20px;
+      }
+    }
+
+    div {
+      p{
+        padding-left: $padding;
+      }
+    }
+
+    .icons-cont {
+      padding-left: $padding;
+      padding-bottom: 40px;
+
+      .icons {
+          width: 30px;
+          height: 30px;
+          padding: 3px;
+      }
+    }
+    .nav1 {
+      ul {
+        padding-left: $padding;
+        padding-bottom: 20px;
+        list-style: none;
+        li {
+          line-height: 38px;
+          a {
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    
+    .nav2 {
+      padding-bottom: 30px;
+      ul {
+        padding-left: $padding;
+        list-style: none;
+        li {
+          line-height: 38px;
+          a {
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .bottom-p {
+      background-image: url(bg-footer-mobile.png);
+      // padding-bottom: 60px;
+      p {
+        text-align: center;
+        font-size: 12px;
+        padding-top: 56px;
+        margin: 0;
+      }
+    }
+  } 
 }
