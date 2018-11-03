@@ -3,6 +3,7 @@
 // font-family: 'Poppins', sans-serif;
 // font-family: 'Open Sans', sans-serif;
 $padding: 20px;
+$padding-big: 70px;
 $body-font: 'Open Sans', sans-serif;
 $headings-font: 'Poppins', sans-serif;
 
@@ -15,6 +16,14 @@ $colors: (
 
 @function color($color-name) {
   @return map-get($colors, $color-name)
+}
+
+$desktop:  840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
 }
 
 body {
@@ -52,22 +61,59 @@ body {
     .section-one {
       padding: $padding;
 
+      @include desktop {
+        padding: $padding-big;
+      }
+
       h1 {
         font-family: $headings-font;
         font-weight: 700;
         text-align: center;
         font-size: 1.4em;
+
+        @include desktop {
+          font-size: 1.5em;
+        }
       }
 
       p {
         text-align: center;
         color: color(neutral2);
         font-size: 0.8em;
+
+        @include desktop {
+          padding-left: 22%;
+          padding-right: 22%;
+          padding-bottom: 20px;
+        }
+      }
+
+      .btn {
+        display: none;
+
+        @include desktop {
+          display: block;
+          width: 30%;
+          height: 40px;
+          margin-left: 35%;
+          margin-right: 35%; 
+          background: color(primary);
+          border: color(primary) 1px solid;
+          border-radius: 4px;
+          color: white;
+          text-transform: capitalize;
+          font-weight: 700;
+          box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.75);
+        }
       }
 
       img {
         width: 100%;
         padding-bottom: 40px;
+
+        @include desktop {
+          padding-top: 65px;
+        }
       }
     }
 
@@ -75,14 +121,39 @@ body {
       width: 100%;
       background: color(neutral3);
       padding-bottom: 50px;
+
+      @include desktop {
+        background: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+          "aa bb";
+
+        .box1 {
+          grid-area: bb;
+          align-self: center;
+        }
+
+        .box2 {
+          grid-area: aa;
+        }
+      }
       
       div {
         padding-top: 60px;
         padding-left:  30px;
         padding-right: 30px;
 
+        @include desktop {
+          padding-right: 40px;
+        }
+
         img {
           width: 100%;
+
+          @include desktop {
+            height: 80%;
+          }
         }
       }
       h1 {
@@ -112,9 +183,13 @@ body {
         font-weight: 700;
         font-size: 1.1em;
         text-transform: capitalize;
+
+        @include desktop {
+          font-size: 1.3em;
+        }
       }
 
-      button {
+      .btn {
         width: 46%;
         height: 40px;
         margin-left: 27%;
@@ -126,6 +201,12 @@ body {
         text-transform: capitalize;
         font-weight: 700;
         box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.75);
+
+        @include desktop {
+          width: 30%;
+          margin-left: 35%;
+          margin-right: 35%;
+        }
       }
     }
   }
@@ -134,18 +215,67 @@ body {
     background: color(neutral1);
     color: white;
 
+    @include desktop {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 2fr;
+      grid-template-areas: 
+        "qq ww ee rr"
+        "tt tt tt tt";
+
+        .box3 {
+          grid-area: rr;
+          align-self: center;
+          justify-self: center;
+          width: 100%;
+          padding-top: 10px;
+        }
+
+        .box4 {
+          grid-area: qq;
+          align-self: center;
+          justify-self: center;
+          padding-left: 40px;
+        }
+
+        .nav1 {
+          grid-area: ww;
+          align-self: center;
+          justify-self: center;
+        }
+
+        .nav2 {
+          grid-area: ee;
+          align-self: center;
+          justify-self: center;
+        }
+
+        .bottom-p {
+          grid-area: tt;
+        }
+    }
+
     h1 {
       text-transform: uppercase;
       font-family: $headings-font;
       font-size: 1.3em;
       padding-left: $padding;
       padding-top: 80px;
+
+      @include desktop {
+        font-size: 1em;
+      }
     }
 
     form {
       padding-left: $padding;
       padding-right: $padding;
       padding-bottom: 60px;
+
+      @include desktop {
+        padding-left: 15px;
+        padding-right: 15px;
+
+      }
 
       input[type="text"] {
         margin: 0;
@@ -157,6 +287,11 @@ body {
         border-bottom-left-radius: 3px;
         display: block;
         float: left;
+        text-align: center;
+
+        @include desktop {
+          width: 75%;
+        }
       }
   
 
@@ -169,6 +304,10 @@ body {
         border-top-right-radius: 3px;
         border-bottom-right-radius: 3px;
         background: color(primary);
+
+        @include desktop {
+          width: 18%;
+        }
       }
     }
     div {
@@ -176,18 +315,34 @@ body {
       .bottom-logo {
         padding-left: $padding;
         padding-bottom: 20px;
+
+        @include desktop {
+          height: 20px;
+          padding-top: 80px;
+          padding-left: 0;
+          padding-bottom: 18px;
+        }
       }
     }
 
     div {
       p{
         padding-left: $padding;
+
+        @include desktop {
+          padding-left: 0;
+          font-size: 0.8em;
+        }
       }
     }
 
     .icons-cont {
       padding-left: $padding;
       padding-bottom: 40px;
+
+      @include desktop {
+        padding-left: 0;
+      }
 
       .icons {
           width: 30px;
@@ -196,46 +351,79 @@ body {
       }
     }
     .nav1 {
+
+      @include desktop {
+        padding-top: 55px;
+      }
       ul {
         padding-left: $padding;
         padding-bottom: 20px;
         list-style: none;
         li {
           line-height: 38px;
+
+          @include desktop {
+            line-height: 22px;
+          }
           a {
             text-decoration: none;
             color: white;
             text-transform: capitalize;
             font-size: 18px;
+
+            @include desktop {
+              font-size: 0.8em;
+            }
           }
         }
       }
     }
     
     .nav2 {
-      padding-bottom: 30px;
+
+      @include desktop {
+        padding-top: 55px;
+      }
       ul {
         padding-left: $padding;
+        padding-bottom: 20px;
         list-style: none;
         li {
           line-height: 38px;
+
+          @include desktop {
+            line-height: 22px;
+          }
           a {
             text-decoration: none;
             color: white;
             text-transform: capitalize;
             font-size: 18px;
+
+            @include desktop {
+              font-size: 0.8em;
+            }
           }
         }
       }
     }
     .bottom-p {
       background-image: url(bg-footer-mobile.png);
-      // padding-bottom: 60px;
+
+      @include desktop {
+        display: block;
+        background-image: url(bg-footer-desktop.png);
+      }
+     
       p {
         text-align: center;
         font-size: 12px;
         padding-top: 56px;
         margin: 0;
+
+        @include desktop {
+          padding-bottom: 10px;
+        }
       }
     }
   } 

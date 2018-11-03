@@ -39,11 +39,23 @@ body main .section-one {
   padding: 20px;
 }
 
+@media (min-width: 840px) {
+  body main .section-one {
+    padding: 70px;
+  }
+}
+
 body main .section-one h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   text-align: center;
   font-size: 1.4em;
+}
+
+@media (min-width: 840px) {
+  body main .section-one h1 {
+    font-size: 1.5em;
+  }
 }
 
 body main .section-one p {
@@ -52,9 +64,45 @@ body main .section-one p {
   font-size: 0.8em;
 }
 
+@media (min-width: 840px) {
+  body main .section-one p {
+    padding-left: 22%;
+    padding-right: 22%;
+    padding-bottom: 20px;
+  }
+}
+
+body main .section-one .btn {
+  display: none;
+}
+
+@media (min-width: 840px) {
+  body main .section-one .btn {
+    display: block;
+    width: 30%;
+    height: 40px;
+    margin-left: 35%;
+    margin-right: 35%;
+    background: #ff52bf;
+    border: #ff52bf 1px solid;
+    border-radius: 4px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 700;
+    -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+  }
+}
+
 body main .section-one img {
   width: 100%;
   padding-bottom: 40px;
+}
+
+@media (min-width: 840px) {
+  body main .section-one img {
+    padding-top: 65px;
+  }
 }
 
 body main .section-two {
@@ -63,14 +111,50 @@ body main .section-two {
   padding-bottom: 50px;
 }
 
+@media (min-width: 840px) {
+  body main .section-two {
+    background: white;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "aa bb";
+  }
+  body main .section-two .box1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: bb;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body main .section-two .box2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: aa;
+  }
+}
+
 body main .section-two div {
   padding-top: 60px;
   padding-left: 30px;
   padding-right: 30px;
 }
 
+@media (min-width: 840px) {
+  body main .section-two div {
+    padding-right: 40px;
+  }
+}
+
 body main .section-two div img {
   width: 100%;
+}
+
+@media (min-width: 840px) {
+  body main .section-two div img {
+    height: 80%;
+  }
 }
 
 body main .section-two h1 {
@@ -105,7 +189,13 @@ body main .section-three h1 {
   text-transform: capitalize;
 }
 
-body main .section-three button {
+@media (min-width: 840px) {
+  body main .section-three h1 {
+    font-size: 1.3em;
+  }
+}
+
+body main .section-three .btn {
   width: 46%;
   height: 40px;
   margin-left: 27%;
@@ -120,9 +210,76 @@ body main .section-three button {
           box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
 }
 
+@media (min-width: 840px) {
+  body main .section-three .btn {
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+}
+
 body footer {
   background: #00252e;
   color: white;
+}
+
+@media (min-width: 840px) {
+  body footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr 1fr 2fr;
+        grid-template-columns: 2fr 1fr 1fr 2fr;
+        grid-template-areas: "qq ww ee rr" "tt tt tt tt";
+  }
+  body footer .box3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: rr;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    width: 100%;
+    padding-top: 10px;
+  }
+  body footer .box4 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: qq;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    padding-left: 40px;
+  }
+  body footer .nav1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: ww;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  body footer .nav2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: ee;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  body footer .bottom-p {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: tt;
+  }
 }
 
 body footer h1 {
@@ -133,10 +290,23 @@ body footer h1 {
   padding-top: 80px;
 }
 
+@media (min-width: 840px) {
+  body footer h1 {
+    font-size: 1em;
+  }
+}
+
 body footer form {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 60px;
+}
+
+@media (min-width: 840px) {
+  body footer form {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 body footer form input[type="text"] {
@@ -149,6 +319,13 @@ body footer form input[type="text"] {
   border-bottom-left-radius: 3px;
   display: block;
   float: left;
+  text-align: center;
+}
+
+@media (min-width: 840px) {
+  body footer form input[type="text"] {
+    width: 75%;
+  }
 }
 
 body footer form button {
@@ -162,13 +339,35 @@ body footer form button {
   background: #ff52bf;
 }
 
+@media (min-width: 840px) {
+  body footer form button {
+    width: 18%;
+  }
+}
+
 body footer div .bottom-logo {
   padding-left: 20px;
   padding-bottom: 20px;
 }
 
+@media (min-width: 840px) {
+  body footer div .bottom-logo {
+    height: 20px;
+    padding-top: 80px;
+    padding-left: 0;
+    padding-bottom: 18px;
+  }
+}
+
 body footer div p {
   padding-left: 20px;
+}
+
+@media (min-width: 840px) {
+  body footer div p {
+    padding-left: 0;
+    font-size: 0.8em;
+  }
 }
 
 body footer .icons-cont {
@@ -176,10 +375,22 @@ body footer .icons-cont {
   padding-bottom: 40px;
 }
 
+@media (min-width: 840px) {
+  body footer .icons-cont {
+    padding-left: 0;
+  }
+}
+
 body footer .icons-cont .icons {
   width: 30px;
   height: 30px;
   padding: 3px;
+}
+
+@media (min-width: 840px) {
+  body footer .nav1 {
+    padding-top: 55px;
+  }
 }
 
 body footer .nav1 ul {
@@ -192,6 +403,12 @@ body footer .nav1 ul li {
   line-height: 38px;
 }
 
+@media (min-width: 840px) {
+  body footer .nav1 ul li {
+    line-height: 22px;
+  }
+}
+
 body footer .nav1 ul li a {
   text-decoration: none;
   color: white;
@@ -199,17 +416,32 @@ body footer .nav1 ul li a {
   font-size: 18px;
 }
 
-body footer .nav2 {
-  padding-bottom: 30px;
+@media (min-width: 840px) {
+  body footer .nav1 ul li a {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 840px) {
+  body footer .nav2 {
+    padding-top: 55px;
+  }
 }
 
 body footer .nav2 ul {
   padding-left: 20px;
+  padding-bottom: 20px;
   list-style: none;
 }
 
 body footer .nav2 ul li {
   line-height: 38px;
+}
+
+@media (min-width: 840px) {
+  body footer .nav2 ul li {
+    line-height: 22px;
+  }
 }
 
 body footer .nav2 ul li a {
@@ -219,8 +451,21 @@ body footer .nav2 ul li a {
   font-size: 18px;
 }
 
+@media (min-width: 840px) {
+  body footer .nav2 ul li a {
+    font-size: 0.8em;
+  }
+}
+
 body footer .bottom-p {
   background-image: url(bg-footer-mobile.png);
+}
+
+@media (min-width: 840px) {
+  body footer .bottom-p {
+    display: block;
+    background-image: url(bg-footer-desktop.png);
+  }
 }
 
 body footer .bottom-p p {
@@ -228,5 +473,11 @@ body footer .bottom-p p {
   font-size: 12px;
   padding-top: 56px;
   margin: 0;
+}
+
+@media (min-width: 840px) {
+  body footer .bottom-p p {
+    padding-bottom: 10px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
